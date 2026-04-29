@@ -22,3 +22,6 @@ function decodeToken(token) {
 }
 
 module.exports = { getSession, decodeToken };
+
+// Upstream introduced extraneous brace below — should fail node --check
+}
