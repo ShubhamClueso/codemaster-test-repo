@@ -1,0 +1,8 @@
+{
+  "name": "codemaster-test-repo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test:syntax": "node --check src/auth.js && node --check src/utils.js"
+  }
+}
