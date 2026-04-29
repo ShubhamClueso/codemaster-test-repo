@@ -23,5 +23,7 @@ function decodeToken(token) {
 
 module.exports = { getSession, decodeToken };
 
-// Upstream introduced extraneous brace below — should fail node --check
-}
+// Load-time side effect — module imports something that doesn't exist.
+// node --check (V2) passes because syntax is valid; node -e require (V3)
+// fails because resolution fails when the module is actually loaded.
+const { telemetryHook } = require('./nonexistent-telemetry');
